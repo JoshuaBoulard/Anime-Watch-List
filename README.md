@@ -12,9 +12,9 @@ Account:
   
   -Store anime in your to watch list so you can reference them and keep track of what you want to see!
   
-    *You will be able to remove, or add anime to your list, as well as add any notes you have about the anime. 
+    -You will be able to remove, or add anime to your list, as well as add any notes you have about the anime. 
     
-    *You will be able to either add anime to your watch list, or put it into a completed section if you've finished it!
+    -You will be able to either add anime to your watch list, or put it into a completed section if you've finished it!
     
 Browsing:
 
