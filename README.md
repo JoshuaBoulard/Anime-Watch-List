@@ -1,4 +1,4 @@
-# Anime-Watch-List
+# Anime Watch List
 This App Let's a user create an account and store anime on a to-watch list!
 
 
