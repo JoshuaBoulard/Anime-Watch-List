@@ -27,7 +27,6 @@ Browsing:
 API's Used:
 
   - https://rickandmortyapi.com/documentation/
-  - 
   - https://myanimelist.net/clubs.php?cid=13727
   
 Stretch Goals:
