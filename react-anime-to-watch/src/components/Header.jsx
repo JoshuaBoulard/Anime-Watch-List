@@ -26,14 +26,14 @@ export const Header = (props) => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Browse</Nav.Link>
+            <Nav.Link href="#/browse">Browse</Nav.Link>
             
 
             
 
             { user && <>
                 <Nav.Link href="#/mylist">My list</Nav.Link>
-                
+                <Nav.Link href="#/mycompleted">My Completed</Nav.Link>
               </>
             }
             {!user && <>
