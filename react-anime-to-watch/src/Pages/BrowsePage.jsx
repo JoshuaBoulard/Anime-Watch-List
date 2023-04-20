@@ -5,7 +5,6 @@ import axios from "axios"
 
 export const getBrowseAnime = async() => {
     let response = await axios.get('/browse/')
-    console.log(response)
     return response.data.data.data
 }
 

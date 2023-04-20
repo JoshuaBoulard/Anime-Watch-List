@@ -40,3 +40,43 @@ export const logOut = async() => {
     console.log(response.data.Logout)
     return response.data.Logout
 }
+
+export const add_to_watch = async (anime_id, action, data) => {
+    let response = await axios.post('/user/add-to-watch/', {
+        'title' : anime_id,
+        'action': action, 
+        'data' : data
+    })
+    console.log(response.data.added)
+    if (response.data.added === false){
+        alert('Login or Signup to add to your list!')
+    } else {
+        return response.data.added
+    }
+    
+}
+
+export const makeNote = async(title, note) => {
+    let response = await axios.post('/user/make_note/', {
+        'title' : title,
+        'note': note
+    })
+    console.log(response.data.success)
+    if (response.data.success === true){
+        window.location.reload()
+    } else {
+        alert('Something went wrong!')
+    }
+}
+
+export const removeAnime = async(title) => {
+    let response = await axios.post('/user/remove_anime/', {
+        'title' : title
+    })
+    console.log(response.data.success)
+    if (response.data.success === true){
+        window.location.reload()
+    } else {
+        alert('something went wrong!')
+    }
+}

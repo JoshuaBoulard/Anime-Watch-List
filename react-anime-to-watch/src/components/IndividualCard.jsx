@@ -3,6 +3,8 @@ import Card from 'react-bootstrap/Card';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
 import { useNavigate } from 'react-router';
+import { add_to_watch } from '../utilities';
+import { useState, useEffect } from 'react';
 // import Accordion from 'react-bootstrap/Accordion'
 // import { getAnime } from '../Pages/HomePage';
 
@@ -22,8 +24,8 @@ export const IndividualCard = (props) => {
         </Card.Text>
       </Card.Body>
       <div style={{display: 'flex', paddingBottom: '1%', justifyContent: 'center'}}>
-        <Button variant="dark">Add/remove</Button>
-        <Button variant="dark">Completed</Button>
+        <Button variant="dark" onClick={() => add_to_watch(animeid, 'watch', props.data)}>Add to-watch</Button>
+        <Button variant="dark" onClick={() => add_to_watch(animeid, 'complete', props.data)}>Completed</Button>
         </div>
         <DropdownButton id="dropdown-item-button" title="Synopsis of This Anime!" variant='dark' style={{display: 'flex', justifyContent: 'center'}}>
       <Dropdown.ItemText className='text-white'>{props.data.synopsis}</Dropdown.ItemText>

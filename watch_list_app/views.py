@@ -28,3 +28,11 @@ def get_anime_by_id(request):
     response = requests.get(endpoint)
     response_content = json.loads(response.content)
     return JsonResponse({'data': response_content})
+
+@api_view(['POST'])
+def search_anime(request):
+    query = request.data['query']
+    endpoint = f'https://api.jikan.moe/v4/anime?q={query}'
+    response = requests.get(endpoint)
+    response_content = json.loads(response.content)
+    return JsonResponse({'data': response_content})

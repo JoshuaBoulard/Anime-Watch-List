@@ -8,10 +8,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { logOut } from '../utilities';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
 
 export const Header = (props) => {
     let user = props.data.name
     let profilePic = props.data.profile_image
+    const [query, setQuery] = useState('')
+    const navigate = useNavigate()
 
     return (
     <>
@@ -60,14 +63,16 @@ export const Header = (props) => {
             </Nav>
             </>}
 
-          <Form className="d-flex">
+          <Form className="d-flex" onSubmit={(e) => [e.preventDefault(), navigate('/search/' + query)]}>
             <Form.Control
               type="search"
-              placeholder="Search"
+              placeholder="Search anime"
               className="me-2"
               aria-label="Search"
+              value={query} 
+              onChange={(e)=> setQuery(e.target.value)}
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success" type="submit">Search</Button>
           </Form>
           
             

@@ -5,9 +5,9 @@ import { SignUp } from './Pages/SignUp'
 import { ProfilePage } from './Pages/ProfilePage'
 import { LogIn } from './Pages/LogIn'
 import { BrowsePage, getBrowseAnime } from './Pages/BrowsePage'
-import { WatchListPage } from './Pages/WatchListPage'
-import { CompletedPage } from './Pages/CompletedPage'
-import { SearchResultsPage } from './Pages/SearchResultsPage'
+import { myWatchList, WatchListPage } from './Pages/WatchListPage'
+import { CompletedPage, myCompletedList } from './Pages/CompletedPage'
+import { search, SearchResultsPage } from './Pages/SearchResultsPage'
 import { ErrorPage } from './Pages/ErrorPage'
 import { getAnimeDetails, IndividualDetailsPage } from './Pages/IndividualDetailsPage'
 
@@ -40,15 +40,18 @@ export const router = createHashRouter([{
         },
         {
             path: '/mylist/',
-            element: <WatchListPage />
+            element: <WatchListPage />,
+            loader: myWatchList
         },
         {
             path: '/mycompleted/',
-            element: <CompletedPage />
+            element: <CompletedPage />,
+            loader: myCompletedList
         },
         {
-            path: '/searchresults/',
-            element: <SearchResultsPage />
+            path: '/search/:query',
+            element: <SearchResultsPage />,
+            loader: search
         },
         {
             path: '/anime/:id',
