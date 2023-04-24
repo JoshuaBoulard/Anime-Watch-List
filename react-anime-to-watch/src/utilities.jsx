@@ -9,7 +9,6 @@ export const signUp = async(name, email, password, profile_image, setInvalid, se
         'password': password,
         'profile_image': profile_image
     })
-    console.log(response.data.success)
     if (response.data.success === false){
         setInvalid(true)
     } else {
@@ -37,7 +36,6 @@ export const currUser = async() => {
 
 export const logOut = async() => {
     let response = await axios.post('/user/logout/')
-    console.log(response.data.Logout)
     return response.data.Logout
 }
 
@@ -47,11 +45,10 @@ export const add_to_watch = async (anime_id, action, data) => {
         'action': action, 
         'data' : data
     })
-    console.log(response.data.added)
     if (response.data.added === false){
         alert('Login or Signup to add to your list!')
     } else {
-        return response.data.added
+        alert('Added succesfully')
     }
     
 }
@@ -61,7 +58,6 @@ export const makeNote = async(title, note) => {
         'title' : title,
         'note': note
     })
-    console.log(response.data.success)
     if (response.data.success === true){
         window.location.reload()
     } else {
@@ -73,10 +69,20 @@ export const removeAnime = async(title) => {
     let response = await axios.post('/user/remove_anime/', {
         'title' : title
     })
-    console.log(response.data.success)
     if (response.data.success === true){
         window.location.reload()
     } else {
         alert('something went wrong!')
+    }
+}
+
+export const changePic = async(image) => {
+    let response = await axios.post('/user/changePic/', {
+        'image': image
+    })
+    if (response.data.success === true){
+        window.location.reload()
+    } else {
+        alert("Something went wrong!")
     }
 }

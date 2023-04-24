@@ -7,6 +7,7 @@ import { getToken } from './components/CsrfToken'
 import { useEffect, useState } from 'react'
 import { currUser } from './utilities'
 import { Outlet } from 'react-router'
+// import { allAnime } from './components/IndividualCard'
 
 function App() {
   const [user, setUser] = useState({'name': null, 'profile_image': null})
