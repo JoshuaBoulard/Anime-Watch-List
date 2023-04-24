@@ -24,7 +24,7 @@ function App() {
 
       <Header data={user}/>
 
-      <Outlet />
+      <Outlet/>
 
     </div>
   )

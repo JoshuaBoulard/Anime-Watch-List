@@ -10,10 +10,10 @@ export const LogIn = () => {
     const [relocate, setRelocate] = useState(null)
 
     const navigate = useNavigate()
-
+    
     useEffect(()=>{
         if(relocate !== null){
-            navigate('/')
+            navigate('/browse')
             window.location.reload()
         }
     }, [relocate])
@@ -28,9 +28,9 @@ export const LogIn = () => {
 
         <form style={{display: 'flex', flexDirection: 'column', width: "50%"}} onSubmit={(e)=> [e.preventDefault(), logIn(email, password, setInvalid, setRelocate)]}>
             <h3 className="text-center text-white">Login</h3>
-            <input placeholder="email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
-            <input type="password" placeholder="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
-            <input type="submit" value="Login"/>
+            <input style={{backgroundColor: 'white'}} placeholder="email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+            <input style={{backgroundColor: 'white'}} type="password" placeholder="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+            <input type="submit" value="Login" className="text-white"/>
             {invalid && <h3 className="text-white text-center">Incorrect Username or password!</h3>}
         </form>
         

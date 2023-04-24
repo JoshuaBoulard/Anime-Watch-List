@@ -47,3 +47,22 @@
     align-items: 'center';
 }  */
 
+.jumbotron {
+  width: 1300px;
+  max-height: 500px;
+  margin: 0 auto;
+/* position: absolute; */
+/* top: 50%;
+left: 50%; */
+/* -ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%); */
+}
+
+.jumbotron-image {
+  width: 1300px;
+  max-height: 500px;
+}
+
+* {
+  background-color: rgb(20, 20, 20);
+}

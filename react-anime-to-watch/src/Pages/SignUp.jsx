@@ -68,10 +68,10 @@ export const SignUp = () => {
             style={{display: 'flex', flexDirection: 'column', width: "50%"}}>
 
             <h3 className="text-center text-white">Sign Up</h3>
-            <input placeholder="name" value={name} onChange={(e)=> setName(e.target.value)}/>
-            <input placeholder="email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
-            <input placeholder="password" type="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
-            <input type="submit" value="Sign Up"/>
+            <input style={{backgroundColor: 'white'}} placeholder="name" value={name} onChange={(e)=> setName(e.target.value)}/>
+            <input style={{backgroundColor: 'white'}} placeholder="email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+            <input style={{backgroundColor: 'white'}} placeholder="password" type="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+            <input className="text-white" type="submit" value="Sign Up"/>
 
             {invalid && <h3 className="text-white text-center">Email is either invalid or taken!</h3>}
 
