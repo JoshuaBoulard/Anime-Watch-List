@@ -21,7 +21,7 @@ Account:
 Browsing:
 
 
-  -You will be able to browse any anime that is currently within the MAL (MyAnimeList) API's database!
+  -You will be able to browse any anime that is currently within the Jikan API's database!
   
   -You will be able to browse anime based on their general or seasonal rankings!
   
@@ -32,7 +32,7 @@ API's Used:
 
 
   - https://rickandmortyapi.com/documentation/
-  - https://myanimelist.net/clubs.php?cid=13727
+  - https://docs.api.jikan.moe/
  
   
 Stretch Goals:
