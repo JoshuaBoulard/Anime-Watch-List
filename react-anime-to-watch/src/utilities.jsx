@@ -47,8 +47,6 @@ export const add_to_watch = async (anime_id, action, data) => {
     })
     if (response.data.added === false){
         alert('Login or Signup to add to your list!')
-    } else {
-        alert('Added succesfully')
     }
     
 }

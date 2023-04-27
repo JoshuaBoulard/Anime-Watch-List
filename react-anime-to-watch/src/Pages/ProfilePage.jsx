@@ -127,7 +127,7 @@ export const ProfilePage = () => {
             </div>
             <h5 hidden={hidden} style={{display: 'flex', justifyContent: 'center', cursor: 'pointer', border: '2px solid white'}} className="text-white" onClick={()=> changePic(profilePic)} >Change</h5>
             <h5 hidden={hidden} style={{display: 'flex', justifyContent: 'center', cursor: 'pointer', border: '2px solid white'}} className="text-white" onClick={()=> setHidden(true)}>Cancel</h5>
-            <Link to='/browse' style={{display: 'flex', justifyContent: 'center', height: '50vh'}}>Back to Browse</Link>
+            <Link to='/toprated' style={{display: 'flex', justifyContent: 'center', height: '50vh'}}>To Top Rated</Link>
         </>
     )
 }

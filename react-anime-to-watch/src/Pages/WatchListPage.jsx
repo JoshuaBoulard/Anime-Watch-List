@@ -51,7 +51,7 @@ export const WatchListPage = () => {
                     </div>
                 </div>
             ))}
-            <Link to='/browse' style={{display: 'flex', justifyContent: 'center', height: '30vh'}}>Back to Browse</Link>
+            <Link to='/toprated' style={{display: 'flex', justifyContent: 'center', height: '30vh'}}>To Top Rated</Link>
             </>
         )
     }

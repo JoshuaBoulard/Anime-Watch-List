@@ -4,12 +4,13 @@ import { getAnime, HomePage } from './Pages/HomePage'
 import { SignUp } from './Pages/SignUp'
 import { ProfilePage } from './Pages/ProfilePage'
 import { LogIn } from './Pages/LogIn'
-import { BrowsePage, getBrowseAnime } from './Pages/BrowsePage'
+import { TopRatedPage, getBrowseAnime } from './Pages/TopRatedPage'
 import { myWatchList, WatchListPage } from './Pages/WatchListPage'
 import { CompletedPage, myCompletedList } from './Pages/CompletedPage'
 import { search, SearchResultsPage } from './Pages/SearchResultsPage'
 import { ErrorPage } from './Pages/ErrorPage'
 import { getAnimeDetails, IndividualDetailsPage } from './Pages/IndividualDetailsPage'
+import { BrowseAllPage } from './Pages/BrowseAllPage'
 
 export const router = createHashRouter([{
     path: '/',
@@ -34,8 +35,8 @@ export const router = createHashRouter([{
             element: <LogIn />
         },
         {
-            path: '/browse/',
-            element: <BrowsePage />,
+            path: '/toprated/',
+            element: <TopRatedPage />,
             loader: getBrowseAnime
         },
         {
@@ -57,6 +58,10 @@ export const router = createHashRouter([{
             path: '/anime/:id',
             element: <IndividualDetailsPage />,
             loader: getAnimeDetails
+        },
+        {
+            path: '/browse/',
+            element: <BrowseAllPage />
         }
     ]
 }])

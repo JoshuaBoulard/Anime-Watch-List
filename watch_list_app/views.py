@@ -36,3 +36,30 @@ def search_anime(request):
     response = requests.get(endpoint)
     response_content = json.loads(response.content)
     return JsonResponse({'data': response_content})
+
+@api_view(['POST'])
+def season_search(request):
+    try:
+        year = request.data['year']
+        season = request.data['season']
+        endpoint = f'https://api.jikan.moe/v4/seasons/{year}/{season}'
+        response = requests.get(endpoint)
+        response_content = json.loads(response.content)
+        return JsonResponse({'data': response_content})
+    except Exception as e:
+        print(e)
+        return JsonResponse({'success': False})
+
+@api_view(['GET'])
+def curr_season(request):
+    endpoint = 'https://api.jikan.moe/v4/seasons/now'
+    response = requests.get(endpoint)
+    response_content = json.loads(response.content)
+    return JsonResponse({'data': response_content})
+
+@api_view(['GET'])
+def upcoming(request):
+    endpoint = 'https://api.jikan.moe/v4/seasons/upcoming'
+    response = requests.get(endpoint)
+    response_content = json.loads(response.content)
+    return JsonResponse({'data': response_content})

@@ -8,12 +8,12 @@ export const getBrowseAnime = async() => {
     return response.data.data.data
 }
 
-export const BrowsePage = () => {
+export const TopRatedPage = () => {
     const animeitems = useLoaderData()
 
     return (
         <>
-        <h3 className="text-white" style={{display: 'flex', justifyContent: 'center'}}>Browse Page</h3>
+        <h3 className="text-white" style={{display: 'flex', justifyContent: 'center'}}>Top Rated</h3>
         <div style={{display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap'}}>
         {animeitems.map((anime, idx)=>(
                 <IndividualCard data={anime} id={idx}/>
