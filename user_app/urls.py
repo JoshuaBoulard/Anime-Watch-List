@@ -11,5 +11,7 @@ urlpatterns = [
     path('mylist/', views.get_my_list, name="get_my_list"),
     path('make_note/', views.make_note, name="make_note"),
     path('mycompleted/', views.get_completed, name="get_completed"),
-    path('remove_anime/', views.remove_anime, name='remove_anime')
+    path('remove_anime/', views.remove_anime, name='remove_anime'),
+    path('allanime/', views.all_anime, name="all_anime"),
+    path('changePic/', views.change_pic, name="change_pic")
 ]

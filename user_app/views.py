@@ -128,3 +128,27 @@ def remove_anime(request):
     except Exception as e:
         print(e)
         return JsonResponse({'success': False})
+
+@api_view(['GET'])
+def all_anime(request):
+    try: 
+        allUserAnime = Anime_list.objects.filter(user=request.user).values()
+        allUserComprehension = [ I for I in allUserAnime ]
+        return JsonResponse({'success': allUserComprehension})
+    except Exception as e:
+        print(e)
+        return JsonResponse({'success': False})
+
+@api_view(['POST'])
+def change_pic(request):
+    try:
+        print(request.user.profile_image)
+        image = request.data['image']
+        # request.user.profile_image = image
+        userProfile = App_User.objects.get(profile_image=request.user.profile_image)
+        userProfile.profile_image = request.data['image']
+        userProfile.save()
+        return JsonResponse({'success': True})
+    except Exception as e:
+        print(e)
+        return JsonResponse({'success': False})

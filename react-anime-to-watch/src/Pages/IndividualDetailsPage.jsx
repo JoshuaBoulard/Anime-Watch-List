@@ -15,17 +15,16 @@ export const IndividualDetailsPage = () => {
     return (
         <>
         <div className="text-white">
-            <h3 style={{justifyContent: 'center', display: 'flex'}}>Individual Details Page</h3>
             <div style={{display: 'flex', justifyContent: 'center'}}>
                 <IndividualCard data={anime}/>
             </div>
-            <div style={{display: 'flex'}}>
+            <div style={{display: 'flex', justifyContent: 'center'}}>
                 <p>Names:</p>
                 {anime.titles.map((title) => (
                 <p>{title.title},</p>
                 ))}
             </div>
-            <p>{anime.synopsis}</p>
+            <p style={{display: 'flex', justifyContent: 'center', borderBottom: '2px solid gray', borderTop: '2px solid gray'}}>{anime.synopsis}</p>
             <p>Season: {anime.season}</p>
             <p>Overall Rank: {anime.rank}</p>
             <p>Episodes: {anime.episodes}</p>
@@ -37,7 +36,9 @@ export const IndividualDetailsPage = () => {
             </div>
             <p>{anime.rating}</p>
             <p>Trailer:</p>
+            <div style={{display: 'flex', justifyContent: 'center', height: '30vh', marginBottom: '2%'}}>
             <iframe src={anime.trailer.embed_url}/>
+            </div>
         </div>
         </>
     )

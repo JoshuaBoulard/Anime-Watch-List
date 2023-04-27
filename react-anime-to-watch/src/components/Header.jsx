@@ -29,6 +29,7 @@ export const Header = (props) => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
+            <Nav.Link href="#/toprated">Top Rated</Nav.Link>
             <Nav.Link href="#/browse">Browse</Nav.Link>
             
 

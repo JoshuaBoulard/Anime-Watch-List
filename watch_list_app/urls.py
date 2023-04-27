@@ -6,5 +6,8 @@ urlpatterns = [
     path('home/', views.get_home_page, name="get_home_page"),
     path('browse/', views.get_browse_page, name="get_browse_page"),
     path('animeById/', views.get_anime_by_id, name="get_anime_by_id"),
-    path('search/', views.search_anime, name="search_anime")
+    path('search/', views.search_anime, name="search_anime"),
+    path('season_search/', views.season_search, name='season_search'),
+    path('curr_season/', views.curr_season, name='curr_season'),
+    path('upcoming/', views.upcoming, name='upcoming')
 ]
